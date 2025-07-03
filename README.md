@@ -1,0 +1,2 @@
+# octragen
+octra wallet generacrot

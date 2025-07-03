@@ -51,7 +51,6 @@ def save_wallets_txt_components(wallets, prefix):
 
 
 if __name__ == "__main__":
-    print_banner()
     try:
         count = int(input("Number of wallets to generate: ").strip())
         prefix = input("Address prefix (e.g. oct, etc.) ").strip()

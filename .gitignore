@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# Generated wallet outputs (secrets - never commit)
+*_wallets.json
+*_mnemonic.txt
+*_private_key.txt
+*_public_key.txt
+*_address.txt

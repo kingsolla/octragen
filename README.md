@@ -38,3 +38,18 @@ python3 octra.py --count 5 --prefix oct
 ```
 
 Tanpa flag, script tetap bertanya secara interaktif seperti biasa.
+
+## Contoh hasil
+
+```bash
+$ python3 octra.py --count 1 --prefix oct
+✅ Saved: oct_wallets.json
+✅ Saved: oct_mnemonic.txt
+✅ Saved: oct_private_key.txt
+✅ Saved: oct_public_key.txt
+✅ Saved: oct_address.txt
+
+✅ Berhasil membuat 1 wallet dengan prefix 'oct'!
+```
+
+`oct_address.txt` berisi alamat-alamat yang dihasilkan. Mnemonic dan private key hanya ada di file `.txt`/`.json` masing-masing - simpan baik-baik dan jangan dibagikan.

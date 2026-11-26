@@ -30,3 +30,11 @@ Untuk tiap batch, script menyimpan:
 ## Peringatan keamanan
 
 Mnemonic dan private key adalah rahasia penuh atas wallet. Jangan dibagikan ke siapa pun, jangan di-commit ke repo, dan jangan disimpan di tempat yang bisa diakses orang lain.
+
+## Mode non-interaktif
+
+```bash
+python3 octra.py --count 5 --prefix oct
+```
+
+Tanpa flag, script tetap bertanya secara interaktif seperti biasa.

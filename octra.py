@@ -1,6 +1,7 @@
 import base64
 import hashlib
 import json
+import argparse
 import datetime
 import base58
 from bip_utils import Bip39MnemonicGenerator, Bip39SeedGenerator
@@ -51,9 +52,22 @@ def save_wallets_txt_components(wallets, prefix):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate Octra wallets dari mnemonic BIP39 24 kata."
+    )
+    parser.add_argument("--count", type=int, default=None,
+                        help="Jumlah wallet yang dibuat (contoh: 5)")
+    parser.add_argument("--prefix", type=str, default=None,
+                        help="Prefix alamat (contoh: oct)")
+    args = parser.parse_args()
+
     try:
-        count = int(input("Number of wallets to generate: ").strip())
-        prefix = input("Address prefix (e.g. oct, etc.) ").strip()
+        count = args.count
+        if count is None:
+            count = int(input("Number of wallets to generate: ").strip())
+        prefix = args.prefix
+        if prefix is None:
+            prefix = input("Address prefix (e.g. oct, etc.) ").strip()
         if not prefix:
             raise ValueError("Prefix tidak boleh kosong")
         if count < 1:
